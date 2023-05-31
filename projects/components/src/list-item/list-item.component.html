@@ -1,0 +1,13 @@
+<div class="author">{{ model?.shorthand }}</div>
+<div class="content">
+  <h4>{{ model?.author }}</h4>
+  <p class="duration">20 min ago</p>
+  <p class="text">
+    Bacon ipsum dolor amet tenderloin landjaeger rump prosciutto. Ham tenderloin hamburger, boudin
+    landjaeger cow fatback tongue t-bone pork loin capicola. Turkey leberkas kevin boudin ground
+    round ham meatball short ribs cupim landjaeger.
+  </p>
+</div>
+<button class="star" mat-ripple (click)="close.emit(model?.id)">
+  <mat-icon fontIcon="close"></mat-icon>
+</button>
