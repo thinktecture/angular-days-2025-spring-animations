@@ -6,8 +6,10 @@
   width: 200px;
   cursor: pointer;
   overflow: hidden;
+  transition: transform 1000ms ease, filter 1000ms ease;
 
   &:hover {
+    transform: scale(1.1);
     .image {
       filter: unset;
     }

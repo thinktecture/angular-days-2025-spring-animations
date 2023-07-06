@@ -1,14 +1,15 @@
-<sl-search-bar></sl-search-bar>
-<div class="conferences-container">
+<sl-search-bar @slideInFromTop></sl-search-bar>
+<div @cards class="conferences-container">
   <sl-card
     *ngFor="let conference of conferences$ | async"
     [routerLink]="['..', 'conferences', conference.id]"
     [model]="conference"
   ></sl-card>
 </div>
-<div class="messages-container">
+<div @messages class="messages-container">
   <h2>Messagees from ...</h2>
   <sl-list-item
+    @slideOutLeft
     *ngFor="let message of messages$ | async"
     [routerLink]="['..', 'messages', message.id]"
     [model]="message"
