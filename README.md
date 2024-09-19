@@ -1,6 +1,6 @@
 # Mit Animationen zum Wow-Effekt: Strategien und Best Practices für ansprechende Angular-Apps (Hands-on)
 
-[Angular Days 2023](https://www.angular-days.de), 19. Oktober 2023, 13:30–17:00
+[Angular Days 2024](https://javascript-days.de/angular/mit-animationen-zum-wow-effekt-strategien-und-best-practices-ansprechende-angular-apps-hands-on/), 22. Oktober 2024, 9:00–12:30
 
 Trainer: Sascha Lehmann ([@derLehmann_S](https://twitter.com/derLehmann_S)) ([@Thinktecture](https://www.thinktecture.com/thinktects/sascha-lehmann/))
 
@@ -24,6 +24,7 @@ npm start
 ```
 
 ---
+
 **NOTE**
 
 Wenn Sie auf dem Branch **view-transitions** wechseln müssen Sie anschließend einen forcierten Install vornehmen, da dort mit der Preview Version von Angular gearbeitet wird und es deshalb zu Problemen mit Peer-Dependencies kommen kann.
@@ -31,10 +32,10 @@ Wenn Sie auf dem Branch **view-transitions** wechseln müssen Sie anschließend 
 ```sh
 npm i --force
 ```
+
 ---
 
-Das Projekt beruht auf er [Angular CLI](https://github.com/angular/angular-cli) Version 16.2.0.
-
+Das Projekt beruht auf er [Angular CLI](https://github.com/angular/angular-cli) Version 18.2.5.
 
 ## Hands-on Lab
 
@@ -50,11 +51,10 @@ Implementiere eine CSS Animation, sodass der **Navigation-Drawer** beim Laden de
 
 <details><summary>Lösung 1. Aufgabe</summary>
 
-```css 
-
+```css
 :host {
-    // ...
-    animation: slideInFromLeft 400ms both ease-out;
+  // ...
+  animation: slideInFromLeft 400ms both ease-out;
 }
 
 @keyframes slideInFromLeft {
@@ -62,7 +62,6 @@ Implementiere eine CSS Animation, sodass der **Navigation-Drawer** beim Laden de
     transform: translateX(-100%);
   }
 }
-
 ```
 
 </details>
@@ -76,7 +75,7 @@ Implementiere für die **Home-Component** folgende CSS Animation:
 
 <details><summary>Lösung 2. Aufgabe</summary>
 
-```css 
+```css
 @mixin fade {
   animation-name: fadeIn;
   animation-duration: 400ms;
@@ -95,13 +94,13 @@ sl-search-bar {
 }
 
 .conferences-container {
-    // ...
-     @include fade;
+  // ...
+  @include fade;
 }
 
 .messages-container {
-    // ...
-     @include fade;
+  // ...
+  @include fade;
 }
 
 @keyframes slideInFromTop {
@@ -110,18 +109,14 @@ sl-search-bar {
     opacity: 0;
   }
 }
-
 ```
 
 </details>
 
-
 <details><summary>3. Aufgabe</summary>
 
-Implementiere für die **Conferences-Component** folgende Animationen:
-    1. Animiere die Liste der Conference-Cards gemeinsam in die View. (Du kannst gerne kreativ werden)
-    2. In der Component befindet sich auch ein **Conference-Info-Drawer** der erscheint, wenn auf eine Card geklickt wird. Animiere diesen so, dass er beim Erscheinen von **rechts** in die View slidet. 
-    3. Zusatz: Kannst du ihn auch wieder heraussliden lassen?
+Implementiere für die **Conferences-Component** folgende Animationen: 1. Animiere die Liste der Conference-Cards gemeinsam in die View. (Du kannst gerne kreativ werden) 2. In der Component befindet sich auch ein **Conference-Info-Drawer** der erscheint, wenn auf eine Card geklickt wird. Animiere diesen so, dass er beim Erscheinen von **rechts** in die View slidet. 3. Zusatz: Kannst du ihn auch wieder heraussliden lassen?
+
 </details>
 
 <details><summary>Lösung 3. Aufgabe</summary>
@@ -130,18 +125,19 @@ Implementiere für die **Conferences-Component** folgende Animationen:
 
 ```css
 :host {
-    // ...
+  // ...
   animation-name: slideInFromRight;
   animation-duration: 800ms;
   animation-timing-function: ease-in-out;
 }
 
-@keyframes slideInFromRight{
- from {
+@keyframes slideInFromRight {
+  from {
     transform: translateX(100%);
- }
+  }
 }
 ```
+
 **conferences.component.scss**
 
 ```css
@@ -159,6 +155,7 @@ Implementiere für die **Conferences-Component** folgende Animationen:
   }
 }
 ```
+
 </details>
 
 <details><summary>4. Aufgabe (Zusatz)</summary>
@@ -194,8 +191,8 @@ Implementiere für die **Messages-Component** eine "staggering" Animation. D.h. 
     transform: scale(0.6) translateY(-0.5rem);
   }
 }
-
 ```
+
 </details>
 
 ---
@@ -205,13 +202,13 @@ Wenn du dir meine beispielhafte Gesamtlösung anschauen möchtst kannst du dir d
 
 ---
 
-### 2. Angular Animations 
+### 2. Angular Animations
 
 Checke zunächst den Branch **angular-animations** aus um darauf die Übung auszuführen.
 
 <details><summary>1. Aufgabe </summary>
 
-Implementiere Slide-In und Slide-Out Angular-Animations für den **Navigation-Drawer** und den **Conference-Info-Drawer**. 
+Implementiere Slide-In und Slide-Out Angular-Animations für den **Navigation-Drawer** und den **Conference-Info-Drawer**.
 
 Zusatz: Überlege wie könnte man den Animationscode wiederverwendbarer gestalten?
 
@@ -222,41 +219,36 @@ Zusatz: Überlege wie könnte man den Animationscode wiederverwendbarer gestalte
 **navigation-drawer.component.ts**
 
 ```ts
-
 @Component({
   // ...
-  animations: [slideInOutAnimationFactory('X', '-100%', '0')]
+  animations: [slideInOutAnimationFactory('X', '-100%', '0')],
 })
 export class NavigationDrawerComponent {
   @HostBinding('@slideInOut')
   private slideInOut = true;
 }
-
-
 ```
 
 **conference-info-drawer.component.ts**
 
 ```ts
-
 @Component({
-    // .....
-  animations: [slideInOutAnimationFactory('X', '100%', '0')]
+  // .....
+  animations: [slideInOutAnimationFactory('X', '100%', '0')],
 })
 export class ConferenceInfoDrawerComponent implements OnInit, OnChanges {
-    // ....
+  // ....
 
   @HostBinding('@slideInOut')
   private slideInOut = true;
 
-    // ...
+  // ...
 }
-    
 ```
 
 **slide.animation.ts**
 
-```ts
+````ts
 
 export const slideInOutAnimationFactory = (
   direction: AnimationDirection,
@@ -320,24 +312,23 @@ export const slideInOutAnimationFactory = (
   ></sl-list-item>
 </div>
 
-```
+````
+
 **messages.component.ts**
 
 ```ts
-
 @Component({
   //...
-  animations: [ListContainer,ListItem]
+  animations: [ListContainer, ListItem],
 })
 export class MessagesComponent {
-    // ...
+  // ...
 }
-
 ```
+
 **list.animation.ts**
 
 ```ts
-
 export const ListItem = trigger('listItem', [
   transition(':enter', [
     style({ opacity: 0, transform: 'translateY(-1.5rem)', scale: 0.8 }),
@@ -375,8 +366,8 @@ export const ListContainer = trigger('listContainer', [
     ]),
   ]),
 ]);
-
 ```
+
 </details>
 
 <details><summary>3. Aufgabe</summary>
@@ -390,70 +381,59 @@ export const ListContainer = trigger('listContainer', [
 **app.component.html**
 
 ```html
-
 <sl-navigation-drawer *slScreenMediumAndLarge></sl-navigation-drawer>
 <main [@routerAnimation]="prepareRoute(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
 <sl-bottom-bar *slScreenXSmallAndSmall></sl-bottom-bar>
-
 ```
 
 **app.component.ts**
 
-```ts 
-
+```ts
 @Component({
   // ...
-  animations: [
-    RouterAnimations
-  ]
+  animations: [RouterAnimations],
 })
 export class AppComponent {
-
   public prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }
-
 ```
 
 **app.routes.ts**
 
-```ts 
-
+```ts
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { animation: 'home' } },
   { path: 'messages', loadChildren: () => import('./components/messages/message.routes') },
   { path: 'conferences', loadChildren: () => import('./components/conferences/conference.routes') },
 ];
-
 ```
 
 **conference.routes.ts**
 
-```ts 
-
+```ts
 const conferenceRoutes: Routes = [
   { path: '', component: ConferencesComponent, data: { animation: 'conferences' } },
   { path: ':id', component: ConferenceDetailComponent, data: { animation: 'detail' } },
 ];
-
 ```
+
 **messages.routes.ts**
 
-```ts 
-
+```ts
 const messageRoutes: Routes = [
   { path: '', component: MessagesComponent, data: { animation: 'messages' } },
-  { path: ':id', component: MessageDetailComponent, data: {animation: 'detail'} },
+  { path: ':id', component: MessageDetailComponent, data: { animation: 'detail' } },
 ];
-
 ```
+
 **router.animation.ts**
 
-```ts 
+```ts
 const routeReset = [
   style({ position: 'relative' }),
   query(
@@ -512,7 +492,6 @@ export const RouterAnimations: AnimationTriggerMetadata = trigger('routerAnimati
     ]),
   ]),
 ]);
-
 ```
 
 </details>
@@ -528,6 +507,3 @@ Wenn du dir meine beispielhafte Gesamtlösung anschauen möchtst kannst du dir d
 
 Dieser Übungsteil dient dazu, dass ihr ein euch ein bisschen mit der View-Transition-API vertraut machen und experimentiern könnt.
 Deshalb gibt es auch keine konkrete Aufgabe die es zu lösen gibt. Seid etwas kreativ und versucht einmal verschiedene Bestanddteile und Übergänge zu animieren.
-
-Falls euch gerade nichts einfällt, oder ihr nicht weiter kommt, könnt ihr auch gerne in meine "Lösung" (Branch **view-taransitions-solution**) schauen und versuchen nachzuvollziehen wie ich welche Effekte erzeugt habe.
-
