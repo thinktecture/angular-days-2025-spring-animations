@@ -1,14 +1,12 @@
-# Mit Animationen zum Wow-Effekt: Strategien und Best Practices für ansprechende Angular-Apps (Hands-on)
+# Level up your Angular App: Mit Animationen zur UX, die begeistert (Hands-on)
 
-[Angular Days 2024](https://javascript-days.de/angular/mit-animationen-zum-wow-effekt-strategien-und-best-practices-ansprechende-angular-apps-hands-on/), 22. Oktober 2024, 9:00–12:30
+[Angular Days 2025](https://javascript-days.de/angular/level-up-your-angular-app-mit-animationen-zur-ux-die-begeistert/), 20. März 2025, 13:30–17:00
 
 Trainer: Sascha Lehmann ([@derLehmann_S](https://twitter.com/derLehmann_S)) ([@Thinktecture](https://www.thinktecture.com/thinktects/sascha-lehmann/))
 
 ---
 
-Animationen gehören neben einem ansprechenden Design zu den wichtigsten Erfolgsfaktoren einer gelungenen User Experience. Der Trend geht hin zu immer mehr Animationen, sodass das Wissen um die Basistechnologien immer mehr an Bedeutung gewinnt.
-
-In diesem Workshop zeigt Ihnen Sascha Lehmann von Thinktecture, wie Sie Ihre Angular-Projekte effektiv auf Animationsanforderungen vorbereiten und wie Sie Hilfe von CSS- und Angular-Animations komplexe Animations-Orchestrierungen vornehmen können. Außerdem werfen wir mit der View Transition API einen Blick in die Zukunft der Webanimationen. Damit verleihen Sie Ihrer Angular-App den letzten Schliff!
+Animationen sind das Geheimnis hinter einer User Experience, die im Gedächtnis bleibt – aber hier gilt nicht ‚viel hilft viel‘! In diesem Hands-on-Workshop zeigt Sascha Lehmann von Thinktecture das ‚kleine Einmaleins der Animationen‘ und wie Sie Ihre Angular-App mit durchdachtem Einsatz aufs nächste Level bringen. Lernen Sie, CSS-, Angular-Animationen und die brandaktuelle View-Transition-API geschickt einzusetzen und wiederverwendbar zu strukturieren. Verleihen Sie Ihrer Angular-App dadurch den perfekten Schliff!
 
 ## Installationsanweisungen
 
@@ -35,7 +33,7 @@ npm i --force
 
 ---
 
-Das Projekt beruht auf er [Angular CLI](https://github.com/angular/angular-cli) Version 18.2.5.
+Das Projekt beruht auf er [Angular CLI](https://github.com/angular/angular-cli) Version 19.2.3.
 
 ## Hands-on Lab
 
