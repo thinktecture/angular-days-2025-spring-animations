@@ -8,11 +8,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRippleModule } from '@angular/material/core';
 
 @Component({
-  selector: 'app-conferences',
-  standalone: true,
-  imports: [CommonModule, RouterLink, MatIconModule, MatRippleModule],
-  templateUrl: './conference-detail.component.html',
-  styleUrls: ['./conference-detail.component.scss'],
+    selector: 'app-conferences',
+    imports: [CommonModule, RouterLink, MatIconModule, MatRippleModule],
+    templateUrl: './conference-detail.component.html',
+    styleUrls: ['./conference-detail.component.scss']
 })
 export class ConferenceDetailComponent {
   private readonly dataService = inject(DataService);

@@ -6,18 +6,17 @@ import { MatRippleModule } from '@angular/material/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'sl-bottom-bar',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatListModule,
-    MatRippleModule,
-    RouterLink,
-    RouterLinkActive,
-  ],
-  templateUrl: './bottom-bar.component.html',
-  styleUrls: ['./bottom-bar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'sl-bottom-bar',
+    imports: [
+        CommonModule,
+        MatIconModule,
+        MatListModule,
+        MatRippleModule,
+        RouterLink,
+        RouterLinkActive,
+    ],
+    templateUrl: './bottom-bar.component.html',
+    styleUrls: ['./bottom-bar.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BottomBarComponent {}

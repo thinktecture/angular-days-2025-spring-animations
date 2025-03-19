@@ -17,12 +17,11 @@ import { MatRippleModule } from '@angular/material/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'sl-conference-info-drawer',
-  standalone: true,
-  imports: [CommonModule, MatInputModule, MatIconModule, MatRippleModule, ReactiveFormsModule],
-  templateUrl: './conference-info-drawer.component.html',
-  styleUrls: ['./conference-info-drawer.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'sl-conference-info-drawer',
+    imports: [CommonModule, MatInputModule, MatIconModule, MatRippleModule, ReactiveFormsModule],
+    templateUrl: './conference-info-drawer.component.html',
+    styleUrls: ['./conference-info-drawer.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConferenceInfoDrawerComponent implements OnInit, OnChanges {
   private fb = inject(FormBuilder);

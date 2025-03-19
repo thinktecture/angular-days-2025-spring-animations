@@ -5,11 +5,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRippleModule } from '@angular/material/core';
 
 @Component({
-  selector: 'sl-list-item',
-  standalone: true,
-  imports: [CommonModule, MatIconModule, MatRippleModule],
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss'],
+    selector: 'sl-list-item',
+    imports: [CommonModule, MatIconModule, MatRippleModule],
+    templateUrl: './list-item.component.html',
+    styleUrls: ['./list-item.component.scss']
 })
 export class ListItemComponent {
   @Input() model?: ListItemData;

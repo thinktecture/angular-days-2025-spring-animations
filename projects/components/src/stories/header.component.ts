@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import type { User } from './User';
 
 @Component({
-  selector: 'storybook-header',
-  template: `<header>
+    selector: 'storybook-header',
+    template: `<header>
     <div class="storybook-header">
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +58,8 @@ import type { User } from './User';
       </div>
     </div>
   </header>`,
-  styleUrls: ['./header.css'],
+    styleUrls: ['./header.css'],
+    standalone: false
 })
 export default class HeaderComponent {
   @Input()

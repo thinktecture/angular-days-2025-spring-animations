@@ -6,18 +6,17 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'sl-navigation-drawer',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatListModule,
-    MatRippleModule,
-    RouterLink,
-    RouterLinkActive,
-    MatIconModule,
-  ],
-  templateUrl: './navigation-drawer.component.html',
-  styleUrls: ['./navigation-drawer.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'sl-navigation-drawer',
+    imports: [
+        CommonModule,
+        MatListModule,
+        MatRippleModule,
+        RouterLink,
+        RouterLinkActive,
+        MatIconModule,
+    ],
+    templateUrl: './navigation-drawer.component.html',
+    styleUrls: ['./navigation-drawer.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigationDrawerComponent {}

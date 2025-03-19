@@ -5,12 +5,11 @@ import { RouterLink } from '@angular/router';
 import { DataService } from '../../data.service';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, SearchBarComponent, CardComponent, ListItemComponent, RouterLink],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-home',
+    imports: [CommonModule, SearchBarComponent, CardComponent, ListItemComponent, RouterLink],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
   private readonly dataService = inject(DataService);

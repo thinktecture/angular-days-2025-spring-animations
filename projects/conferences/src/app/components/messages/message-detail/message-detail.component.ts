@@ -8,11 +8,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRippleModule } from '@angular/material/core';
 
 @Component({
-  selector: 'app-message-datail',
-  standalone: true,
-  imports: [CommonModule, RouterLink, MatIconModule, MatRippleModule],
-  templateUrl: './message-detail.component.html',
-  styleUrls: ['./message-detail.component.scss'],
+    selector: 'app-message-datail',
+    imports: [CommonModule, RouterLink, MatIconModule, MatRippleModule],
+    templateUrl: './message-detail.component.html',
+    styleUrls: ['./message-detail.component.scss']
 })
 export class MessageDetailComponent {
   private readonly dataService = inject(DataService);

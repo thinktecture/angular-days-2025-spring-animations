@@ -8,16 +8,15 @@ import {
 } from '@sl/components';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    NavigationDrawerComponent,
-    BottomBarComponent,
-    XSmallAndSmallScreenSizeDirective,
-    MediumAndLargeScreenSizeDirective,
-  ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        NavigationDrawerComponent,
+        BottomBarComponent,
+        XSmallAndSmallScreenSizeDirective,
+        MediumAndLargeScreenSizeDirective,
+    ],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {}
